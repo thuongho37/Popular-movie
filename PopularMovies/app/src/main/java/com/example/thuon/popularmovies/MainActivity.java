@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mImageView;
     private TextView mTextView;
     String githubSearchResults;
-    String default_sort = "http://api.themoviedb.org/3/movie/top_rated?api_key=99f1f5f44123483aa395e7ecb901cd7a";
+    String default_sort = "http://api.themoviedb.org/3/movie/top_rated?(MY API KEY)";
     ArrayList<String> listdata = new ArrayList<String>();
     List<String> posterData = new ArrayList<String>();
     JSONObject results;
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.popular:
                 movieAdapter.clear();
-                String sort_popular = "http://api.themoviedb.org/3/movie/popular?api_key=99f1f5f44123483aa395e7ecb901cd7a";
+                String sort_popular = "http://api.themoviedb.org/3/movie/popular?api_key=(MY API KEY)";
                 getURL(sort_popular);
                 movieAdapter.notifyDataSetChanged();
 
